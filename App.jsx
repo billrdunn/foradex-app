@@ -3,16 +3,6 @@ import { StyleSheet, Text, View } from "react-native";
 
 // http://localhost:19000/debugger-ui/
 
-export default function App() {
-  console.log("hello!");
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -21,3 +11,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+
+export default function App() {
+  console.log("hello!");
+  const style = { color: "red" };
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style={style} />
+    </View>
+  );
+}

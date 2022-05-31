@@ -1,15 +1,22 @@
-import { FlatList, View, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import Item from "./Item";
 
 const styles = StyleSheet.create({
-  separator: {
-    height: 10,
+  flexContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    flexGrow: 1,
+    justifyContent: "space-around",
+    padding: 0,
+    margin: 0,
   },
 });
 
 const items = [
   {
     latin: "Laccaria laccata",
+    common: ["Amethyst Deceiver"],
     description: {
       cap: "Convex to flattened with depressed centre...",
       gills: "Deep purple/lilac when young...",
@@ -19,10 +26,12 @@ const items = [
     },
     habitat: "Mixed woodland, particularly with oak and beech.",
     flavour: "Mildly nutty/mushroomy.",
-    frequency: "Common",
+    frequency: "Common.",
+    image: "https://www.wildfooduk.com/wp-content/uploads/2018/01/Amerthyst-8-1.jpg",
   },
   {
     latin: "Amanita muscaria",
+    common: ["Fly Agaric"],
     description: {
       cap: "Hemispherical at first when it can sometimes be more orangey than red, ...",
       gills: "Gills white to cream, fairly crowded and not joined to the stem.",
@@ -33,9 +42,11 @@ const items = [
     habitat: "Birch woods in particular but can be found in other mixed woodland.",
     flavour: "n/a",
     frequency: "Common.",
+    image: "https://www.wildfooduk.com/wp-content/uploads/2018/01/Fly-Agaric-2.jpg",
   },
   {
     latin: "Scleroderma citrinum",
+    common: ["Common Earthball"],
     description: {
       cap: "n/a",
       gills: "n/a",
@@ -46,23 +57,17 @@ const items = [
     habitat: "In most woodland and on mossy or peaty soil on heathland.",
     flavour: "n/a",
     frequency: "Common.",
+    image: "https://www.wildfooduk.com/wp-content/uploads/2018/01/Earthball-1.jpg",
   },
 ];
 
-function ItemSeparator() {
-  return <View style={styles.separator} />;
-}
-
-const renderItem = ({ item }) => <Item item={item} />;
-
 function ItemList() {
   return (
-    <FlatList
-      data={items}
-      ItemSeparatorComponent={ItemSeparator}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.latin}
-    />
+    <View style={styles.flexContainer}>
+      {items.map((item) => (
+        <Item item={item} key={item.latin} />
+      ))}
+    </View>
   );
 }
 

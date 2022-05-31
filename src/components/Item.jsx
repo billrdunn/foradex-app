@@ -1,5 +1,4 @@
 import { View, StyleSheet, Image } from "react-native";
-import Text from "./Text";
 import SubheadingText from "./SubheadingText";
 import theme from "../theme";
 
@@ -13,7 +12,7 @@ const styles = StyleSheet.create({
     margin: 0,
   },
   flexItem: {
-    backgroundColor: theme.colors.itemBackground,
+    backgroundColor: theme.colors.primary,
     padding: 5,
     width: 150,
     height: 150,

@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
+import { Link } from "react-router-native";
 import Text from "./Text";
 import theme from "../theme";
 
@@ -14,11 +14,11 @@ const styles = StyleSheet.create({
 function AppBarTab({ text }) {
   return (
     <View style={styles.item}>
-      <Pressable>
+      <Link to={`/${text.toLowerCase()}`}>
         <Text fontWeight="bold" fontSize="appBar">
           {text}
         </Text>
-      </Pressable>
+      </Link>
     </View>
   );
 }

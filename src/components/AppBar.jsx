@@ -24,7 +24,7 @@ function AppBar() {
     <View style={styles.container}>
       <AppBarTab text="Items" />
       <AppBarTab text="About" />
-      <AppBarTab text="Info" />
+      <AppBarTab text="SignIn" />
     </View>
   );
 }

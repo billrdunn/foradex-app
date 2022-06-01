@@ -5,6 +5,8 @@ import AppBar from "./AppBar";
 import theme from "../theme";
 import SignIn from "./SignIn";
 import About from "./About";
+import Search from "./Search";
+import ItemPage from "./ItemPage";
 
 const styles = StyleSheet.create({
   container: {
@@ -22,6 +24,8 @@ function Main() {
         <Route path="/" element={<ItemList />} exact />
         <Route path="/signin" element={<SignIn />} exact />
         <Route path="/about" element={<About />} exact />
+        <Route path="/search" element={<Search />} exact />
+        <Route path="/item/*" element={<ItemPage />} exact />
         <Route path="*" element={<Navigate to="/" />} replace />
       </Routes>
     </View>

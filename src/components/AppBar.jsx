@@ -29,6 +29,7 @@ function AppBar() {
       <ScrollView style={styles.scrollView} horizontal>
         <AppBarTab text="Items" />
         <AppBarTab text="About" />
+        <AppBarTab text="Search" />
         <AppBarTab text="SignIn" />
       </ScrollView>
     </View>

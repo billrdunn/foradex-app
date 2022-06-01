@@ -1,4 +1,5 @@
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, Pressable } from "react-native";
+import { Link } from "react-router-native";
 import SubheadingText from "./SubheadingText";
 import theme from "../theme";
 
@@ -29,12 +30,20 @@ const styles = StyleSheet.create({
   },
 });
 
+const onPressHandler = () => {
+  console.log("pressed");
+};
+
 function Item({ item }) {
   return (
-    <View style={styles.flexItem}>
-      <SubheadingText fontSize="subheading" fontWeight="bold" text={item.common[0]} />
-      <Image style={styles.image} source={{ uri: item.image }} />
-    </View>
+    <Pressable onPress={onPressHandler}>
+      <Link to={`/item/${item.id}`}>
+        <View style={styles.flexItem}>
+          <SubheadingText fontSize="subheading" fontWeight="bold" text={item.common[0]} />
+          <Image style={styles.image} source={{ uri: item.image }} />
+        </View>
+      </Link>
+    </Pressable>
   );
 }
 

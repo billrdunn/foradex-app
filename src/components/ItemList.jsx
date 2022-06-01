@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
 
 const items = [
   {
+    id: 0,
     latin: "Laccaria laccata",
     common: ["Amethyst Deceiver"],
     description: {
@@ -30,6 +31,7 @@ const items = [
     image: "https://www.wildfooduk.com/wp-content/uploads/2018/01/Amerthyst-8-1.jpg",
   },
   {
+    id: 1,
     latin: "Amanita muscaria",
     common: ["Fly Agaric"],
     description: {
@@ -45,6 +47,7 @@ const items = [
     image: "https://www.wildfooduk.com/wp-content/uploads/2018/01/Fly-Agaric-2.jpg",
   },
   {
+    id: 2,
     latin: "Scleroderma citrinum",
     common: ["Common Earthball"],
     description: {
